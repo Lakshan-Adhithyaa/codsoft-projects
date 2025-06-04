@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+  <title>My Portfolio Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      
+      font-family: "Cursive","Bree Serif","sans-serif";
+    }
+
+    body {
+   
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #161b22;
+      color: #58a6ff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 2px solid #58a6ff;
+    }
+
+    .my-name {
+      font-size: 55px;
+    }
+    .whole-container{
+       background-image: url("https://images.unsplash.com/photo-1736325263301-488931888151?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+       background-size: cover;
+    }
+   .para1 {
+      font-size: 38px;
+      color: #8b949e;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 20px;
+      
+      font-size:36px;
+      font-family: "Bree Serif";
+      
+      
+    }
+    h2 span{
+       border-left: 5px solid #58a6ff;
+      border-right:5px solid #58a6ff;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .about-img {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px #30353a4d;
+    }
+
+    .skills-ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills li {
+      background: #58a6ff;
+      color: #0d1117;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+      font-family:"Bree Serif";
+    }
+
+    .skills li:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card {
+      margin-bottom: 28px;
+      background: #161b22;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px ;
+    }
+
+    .projects-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .resume a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: bold;
+      background: #161b22;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      transition:  0.3s;
+    }
+
+    .resume a:hover {
+      background-color: #58a6ff;
+      color: #0d1117;
+    }
+
+    .contact-li{
+      margin-bottom: 10px;
+      
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #161b22;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+    }
+   .navbar-nav li{
+    margin-left: 10px;
+    margin-right: 10px;
+   }
+   
+  </style>
+</head>
+<body>
+  <div class = "whole-container">
+   <div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">My Portfolio Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse "  id="navbarNav">
+      <ul class="navbar-nav" style = "margin-left:auto;"  >
+        <li class="nav-item">
+          <a class="nav-link active" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#resume">Resume</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact me</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+  <header>
+    <h1 class = "my-name">Lakshan Adhithyaa. S</h1>
+    <h3 class = "para1">Web Developer </h3>
+    
+  </header>
+ 
+  <section id = "about">
+    <h2><span>About Me</span></h2>
+    <img class = "about-img" src="images/my-profile-image.jpg" alt="Your Image">
+    <p>Hello! I’m Lakshan Adhithya, a first-year B.Tech student specializing in Artificial Intelligence and Machine Learning at R.M.D Engineering college. I am passionate about building real-world tech solutions and continuously strive to expand my capabilities in both development and AI. As a Web Development Intern at CodSoft and a Python Programming Intern at Interpe, I’ve gained hands-on experience in creating functional and user-friendly applications.
+
+Through my journey with NxtWave’s CCBP 4.0 Academy, I have developed and deployed several static and responsive web pages using HTML, CSS, and the Bootstrap framework. I’m also deeply interested in exploring cutting-edge technologies and modern AI tools, integrating them into my learning and projects. I am actively seeking opportunities to apply my skills, collaborate with like-minded individuals, and grow both technically and professionally. My ultimate goal is to contribute to impactful, innovative solutions that align with today’s fast-evolving digital world.
+
+</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2><span>Skills</span></h2>
+    <ul class="skills-ul">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>Git</li>
+      <li>C++</li>
+      <li>Python</li>
+      <li style="background-color: #0e56ca;">Bootstrap</li>
+     
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2><span>Projects</span></h2>
+    <div class="project-card">
+      <h3>Digital Clock</h3>
+      <img class = "projects-img" src="images/digital clock image.jpg" alt="Project One">
+      <p>Digital Clock with Date, Day, and Theme Toggle (Python & Tkinter)
+This is a GUI-based digital clock application developed using Python and the Tkinter library. It displays the current time, date, and day of the week in real time. The project also features a light/dark mode toggle to enhance user experience. Through this project, I gained practical knowledge of GUI development, event-driven programming, and Python’s datetime module, while focusing on clean design and usability.</p>
+    </div>
+    <div class="project-card">
+      <h3>Tic Tac Toe game</h3>
+      <img class = " projects-img" src="images/tic tac toe game.jpg" alt="Project Two">
+      <p>Tic Tac Toe Game using Python & Tkinter
+This is a classic two-player Tic Tac Toe game developed with Python’s Tkinter library, offering an intuitive graphical interface. The game handles player turns, detects winning conditions and draws, and provides instant feedback after each move. Building this project allowed me to deepen my understanding of GUI programming, logical flow control, and creating interactive user experiences with Python..</p>
+    </div>
+  </section>
+
+  <section id = "resume" class="resume">
+    <h2><span>Resume</span></h2>
+    <p><a href="#" download>Download My Resume (PDF)</a></p>
+  </section>
+
+  <section id="contact">
+    <h2><span>Contact</span></h2>
+    <ul>
+    <li class = "contact-para">Email: <a href="mailto:laskhanadhithyaa@mail.com">lakshanadhithyaa@gmail.com</a></li>
+    <li class = "contact-para">LinkedIn: <a href="https://www.linkedin.com/in/lakshan-adhithyaa" target="_blank">Lakshan Adhithyaa</a></li>
+    <li class = "contact-para">Phone: +919176868906</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All Rights Reserved.<a href="mailto: lakshanadhithyaa@gmail.com">lakshanadithyaa@gmail.com </a></p>
+  </footer>
+  </div>
+</body>
+</html>
