@@ -138,14 +138,46 @@
     margin-left: 10px;
     margin-right: 10px;
    }
+   .custom-navbar {
+  background-color: #0d1117f2; 
+  border-bottom: 1px solid #58a6ff;
+  padding: 10px 20px;
+  
+  
+}
+
+.custom-navbar .navbar-brand {
+  color: #1fddf2;
+  font-weight: bold;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #015ec7;
+}
+
+.custom-navbar .nav-link {
+  color: #f6f7f8;
+  transition: color 0.3s;
+}
+
+.custom-navbar .nav-link:hover,.custom-navbar .nav-link.active:hover{
+  color: #58a6ff;
+  border-bottom: 2px solid #58a6ff;
+  padding-bottom: 3px;
+}
+.custom-navbar .nav-link.active {
+  color: #f6f8fa;
+}
    
   </style>
 </head>
 <body>
   <div class = "whole-container">
-   <div>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+   
+<nav class="navbar navbar-expand-lg custom-navbar ">
+  <div class="container-fluid  ">
     <a class="navbar-brand" href="#">My Portfolio Website</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -171,7 +203,7 @@
     </div>
   </div>
 </nav>
-</div>
+
 
   <header>
     <h1 class = "my-name">Lakshan Adhithyaa. S</h1>
