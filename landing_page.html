@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Innovation Redefined</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --blue-grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --pink-grad: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --dark-grad: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        }
+
+
+
+.hero-section {
+    background: var(--blue-grad);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.hero-title {
+    font-size: 58px;
+    font-weight: 800;
+    color: transparent;
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0 30px;
+}
+
+
+.button1 {
+
+    background: var(--pink-grad);
+    border: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    color: white;
+    display: inline-block;
+    transition: all 0.3s ease;
+animation: fadeInUp 1s ease-out 0.4s both;
+
+
+}
+
+
+.button1:hover {
+    background: #20c8c8;
+
+
+}
+
+.cta-button{
+
+    background: var(--blue-grad);
+    border:none;
+    font-size:18px;
+    font-weight:600;
+    color: white;
+     text-decoration: none;
+  
+
+}
+
+
+.features-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.feature-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    background: var(--blue-grad);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.stats-section {
+    background: var(--dark-grad);
+    padding: 100px 0;
+    color: white;
+}
+
+.stat-item {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.stat-number1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--blue-grad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.cta-section {
+    background: var(--pink-grad);
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    background: #212529;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--blue-grad);
+    transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    font-size: 18px;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: var(--blue-grad);
+    color:transparent;
+    background-clip: text;
+}
+.navbar-brand:hover{
+
+color:#32c8f1
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">TechFlow</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="hero-section">
+    <div class="floating-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Innovation Redefined</h1>
+            <p class="hero-subtitle">Empower your business with next-gen technology solutions that spark growth.</p>
+            <button class="button1" onclick="location.href='#features'">Get Started →</button>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="features-section">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-4 fw-bold mb-4">Why Choose TechFlow?</h2>
+                <p class="lead">Discover the features that make us the perfect partner for your digital transformation journey.</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="mb-3">Lightning Fast</h4>
+                    <p class="text-muted">Experience blazing fast performance with our optimized infrastructure and cutting-edge technology stack.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="mb-3">Secure & Reliable</h4>
+                    <p class="text-muted">Your data is protected with enterprise-grade security measures and 99.9% uptime guarantee.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="mb-3">Mobile First</h4>
+                    <p class="text-muted">Fully responsive design that works perfectly on all devices, from mobile to desktop.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="mb-3">Analytics</h4>
+                    <p class="text-muted">Get detailed insights and analytics to make data-driven decisions for your business growth.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="mb-3">24/7 Support</h4>
+                    <p class="text-muted">Round-the-clock customer support to help you whenever you need assistance.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4 class="mb-3">Easy Integration</h4>
+                    <p class="text-muted">Seamlessly integrate with your existing tools and workflows with our robust API.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <div class="stat-number1">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="cta-section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-4 fw-bold mb-4">Ready to Get Started?</h2>
+                <p class="lead mb-5">Join as one of the customers to achieve your goal faster and to fasten your journey</p>
+                <a href="#" class="btn btn-lg rounded-pill cta-button">
+                    Start Your Free Trial
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+<div class="container">
+    <div class="row">
+        
+        <div class="col-lg-4 mb-4">
+            <h5>TechFlow</h5>
+            <p>Transforming businesses with innovative technology solutions using experts and ai tools.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4">
+            <h6>Product</h6>
+            <ul class="list-unstyled">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Integrations</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4">
+            <h6>Company</h6>
+            <ul class="list-unstyled">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            <h6>Newsletter</h6>
+            <p>Stay updated with our latest news and updates.</p>
+            
+        </div>
+
+    </div>
+
+    <hr>
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>&copy; 2025 TechFlow. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="#">Privacy Policy</a>
+            <a href="#" class="ms-3">Terms of Service</a>
+        </div>
+    </div>
+</div>
+</footer>
+
+
+   
+</body>
+</html>
