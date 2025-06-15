@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+   
+
+        body {
+
+            font-family: Arial, sans-serif;
+            background:  #7566ea ;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+              margin: 0; 
+            padding: 0; 
+            box-sizing : border-box; 
+
+
+        }
+
+        .calculator{
+
+            margin: 0 auto;
+            max-width:400px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 100%;
+           
+
+
+        }
+
+        .calculator h1{
+
+
+            text-align: center;
+            color:black;
+            margin-bottom: 20px;
+            
+
+        }
+
+        .display{
+
+
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 33px;
+            text-align: right;
+            margin-bottom: 20px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: #333;
+            font-weight: bold;
+            overflow-wrap: break-word;
+
+
+        }
+
+        .buttons {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+
+            
+        }
+
+        .btn {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color:black;
+            height: 60px;
+            text-align:center;
+
+
+        }
+
+        .btn:hover{
+            background: #b6bbbe;
+            transform: translateY(-4px);
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+
+        .btn.operator{ 
+            background: #007bff;
+            color: white; 
+            border-color: #0056b3;
+        
+        }
+
+        .btn.operator:hover{ background: #0056b3;
+
+        }
+
+        .btn.equals{ 
+            background: #28a745; 
+            color: white; 
+            border-color: #1e7e34; 
+
+
+        }
+        
+        .btn.equals:hover{ background: #1e7e34;
+        
+        }
+        .btn.clear{ 
+            background: #dc3545; 
+            color: white; 
+            border-color: #c82333; 
+        
+        }
+        .btn.clear:hover{ background: #c82333; 
+        }
+
+        .btn.zero { 
+            grid-column: span 2; 
+        }
+
+        @media (max-width: 480px) {
+            .calculator { padding: 20px; }
+            .display { font-size: 24px; padding: 10px; }
+            .btn { padding: 15px; font-size: 17px; height: 50px; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn clear" onclick="clearDisplay()">C</button>
+            <button class="btn clear" onclick="deleteLast()">⌫</button>
+            <button class="btn operator" onclick="inputOperator('/')">/</button>
+            <button class="btn operator" onclick="inputOperator('*')">X</button>
+
+            <button class="btn" onclick="inputNumber('7')">7</button>
+            <button class="btn" onclick="inputNumber('8')">8</button>
+            <button class="btn" onclick="inputNumber('9')">9</button>
+            <button class="btn operator" onclick="inputOperator('-')">-</button>
+
+            <button class="btn" onclick="inputNumber('4')">4</button>
+            <button class="btn" onclick="inputNumber('5')">5</button>
+            <button class="btn" onclick="inputNumber('6')">6</button>
+            <button class="btn operator" onclick="inputOperator('+')">+</button>
+
+            <button class="btn" onclick="inputNumber('1')">1</button>
+            <button class="btn" onclick="inputNumber('2')">2</button>
+            <button class="btn" onclick="inputNumber('3')">3</button>
+            <button class="btn equals" onclick="calculateResult()">=</button>
+
+            <button class="btn zero" onclick="inputNumber('0')">0</button>
+            <button class="btn" onclick="inputDecimal()">.</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        let expression = '';
+
+        function updateDisplay() {
+            display.textContent = expression || '0';
+        }
+
+        function inputNumber(number) {
+            expression += number;
+            updateDisplay();
+        }
+
+        function inputDecimal() {
+            expression += '.';
+            updateDisplay();
+        }
+
+        function inputOperator(op) {
+            if (expression === '' || /[+\-*/]$/.test(expression)) return; 
+            expression += op;
+            updateDisplay();
+        }
+
+        function calculateResult() {
+            try {
+                let result = eval(expression);
+                expression = result.toString();
+                updateDisplay();
+            } catch (e) {
+                alert("Invalid Expression");
+            }
+        }
+
+        function clearDisplay() {
+            expression = '';
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            expression = expression.slice(0, -1);
+            updateDisplay();
+        }
+
+        document.addEventListener('keydown', function(event) {
+            const key = event.key;
+            if (/[0-9]/.test(key)) inputNumber(key);
+            else if (key === '.') inputDecimal();
+            else if ('+-*/'.includes(key)) inputOperator(key);
+            else if (key === 'Enter' || key === '=') calculateResult();
+            else if (key === 'Escape' || key.toLowerCase() === 'c') clearDisplay();
+            else if (key === 'Backspace') deleteLast();
+        });
+
+        updateDisplay();
+    </script>
+</body>
+</html>
